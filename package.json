@@ -1,0 +1,9 @@
+{
+  "name": "road",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/houdiini/road.git",
+  "author": "houdiini <ivashkevych.a@brights.cloud>",
+  "license": "MIT",
+  "private": false
+}

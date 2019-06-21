@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    <!-- <vue-audio :file="currentTrack" :loop="true" :autoPlay="true" /> -->
     <svg class="image" width="378" height="272" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fill-rule="evenodd">
         <path d="M132.966 31.5l-131.78 236h375.652l-135.627-236H132.966z" stroke="#414141" fill="#9D9D9D"/>
@@ -72,9 +71,10 @@ export default {
   data() {
     return {
       files: [
-        'sinkane-the-searching.mp3',
-        'ryewhiskey.mp3',
-        '3.mp3',
+        'dist/3.mp3',
+        'dist/ryewhiskey.mp3',
+        'dist/sinkane-the-searching.mp3',
+        'dist/3.mp3',
       ],
       animation: anime.timeline({
           easing: 'linear',
@@ -158,7 +158,7 @@ export default {
             this.isPlay = true;
             
         }).catch(error => {
-          isPlay = false;
+          this.isPlay = false;
           // this.animation.play();
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.
@@ -171,6 +171,7 @@ export default {
     currentTrack() {
       let day = (new Date() - new Date(2019, 5, 21)) / 86400000;
       let dayIndex = Math.floor(day);
+      // console.log(   dayIndex);
       return this.files[dayIndex];
     }
   },
@@ -196,7 +197,7 @@ export default {
                 // duration: 500,
             })
         }).catch(error => {
-          isPlay = false;
+          this.isPlay = false;
           // this.animation.play();
             // Autoplay was prevented.
             // Show a "Play" button so that user can start playback.

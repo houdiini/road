@@ -75,6 +75,9 @@ export default {
         'dist/ryewhiskey.mp3',
         'dist/sinkane-the-searching.mp3',
         'dist/3.mp3',
+        'dist/4.mp3',
+        'dist/5.mp3',
+        'dist/6.mp3',
       ],
       animation: anime.timeline({
           easing: 'linear',
